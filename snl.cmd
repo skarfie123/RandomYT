@@ -1,0 +1,1 @@
+ydl -e -i --get-id https://www.youtube.com/user/SaturdayNightLive>snl.txt
