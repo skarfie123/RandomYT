@@ -1,5 +1,6 @@
 import random
 import sys
+import webbrowser
 
 
 def main():
@@ -8,9 +9,10 @@ def main():
         try:
             while True:
                 i = random.randint(0, len(text) / 2 - 1)
-                print(
-                    f"{i} -> http://www.youtube.com/watch?v={text[2*i]} -> {text[2*i+1]}"
-                )
+                url = f"http://www.youtube.com/watch?v={text[2*i]}"
+                print(f"{i} -> {url} -> {text[2*i+1]}")
+                webbrowser.open(url)
+                input()
         except KeyboardInterrupt:
             sys.exit()
 
