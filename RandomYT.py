@@ -1,4 +1,5 @@
 import random
+import sys
 
 
 def main():
@@ -8,10 +9,10 @@ def main():
             while True:
                 i = random.randint(0, len(text) / 2 - 1)
                 print(
-                    f"{i} -> {text[2*i+1]} -> http://www.youtube.com/watch?v={text[2*i]}"
+                    f"{i} -> http://www.youtube.com/watch?v={text[2*i]} -> {text[2*i+1]}"
                 )
         except KeyboardInterrupt:
-            exit()
+            sys.exit()
 
 
 if __name__ == "__main__":
